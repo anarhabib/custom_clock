@@ -10,15 +10,20 @@ function setDate() {
     const secondDegree = sec * 6;
     secHand.style.transform = `rotate(${secondDegree}deg)`
 
-    const hour = now.getHours();
-    const hourDegree = (( hour / 12)*360);
-    hourHand.style.transform = `rotate(${hourDegree}deg)`
-
     const min = now.getMinutes();
     const minDegree = ((min /60) * 360)
     minHand.style.transform = `rotate(${minDegree}deg)`
-}
 
+
+
+    const hour = now.getHours();
+    console.log(minDegree);
+    const hourDegree = (( hour / 12)*360);
+    hourHand.style.transform = `rotate(${hourDegree + (30 / (360 / minDegree))}deg)`
+    console.log(hourHand.style.transform);
+    
+}
+   
 setInterval(() => {
     setDate()
 }, 1000);

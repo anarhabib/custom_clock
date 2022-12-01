@@ -56,9 +56,12 @@
 
 .sec-hand{
     transform: rotate(0deg);
+    background-color: #1d0052ce;
+
 }
 .hour-hand{
     transform: rotate(0deg);
+    background-color: #1d0052;
 }
 .min-hand{
     transform: rotate(0deg);
